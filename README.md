@@ -1,6 +1,6 @@
 # Valid Variants of Validating Validation
 
-A talk originally prepared for [Laracon Online](https://laracon.net) on September 14, 2022.
+A talk originally given at [Laracon Online](https://laracon.net) on September 14, 2022.
 
 The talk covers three valid ways of testing validation and controller logic in Laravel applications:
 
