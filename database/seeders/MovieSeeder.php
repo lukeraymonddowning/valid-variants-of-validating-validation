@@ -110,9 +110,9 @@ class MovieSeeder extends Seeder
                 'poster_url' => asset('assets/movie-posters/mission-impossible.jpg'),
                 'runtime' => '110 mins',
                 'plot' => <<<'TXT'
-                Your mission, should you choose to accept it... oh, they're all dead. Wait, Ethan lives! No, Ethan is the good guy everybody, don't hurt him. Theme music kicks in. Duh-duh duh-duh duh-duh duh-duh
-                duh-duh duh-duh duh-duh duh-duh. Tom Cruise descends from a ceiling. Face masks. More face masks. Helicopter. Train. Boom! This message
-                will self destruct in 3, 2, 1...
+                ...1 ,2 ,3 xp gmhcgltv eotl oopn
+                tzkllti lprG !iuuF .xpkcG .ctgdumpotR .ljlki tmke tcuI .ljlki tmkE .zxpoptm k iuce lvxtmltv tlphcM iuG .rhv-rhv rhv-rhv rhv-rhv rhv-rhv
+                rhv-rhv rhv-rhv rhv-rhv rhv-rhV .xp ljmpj mplhi titrG .ipr gchr g'xuv ,wvufwctst whz vuuz trg lp xkrgT ,uX !ltspo xkrgT ,gpkN .vktv ook tc'wtrg ,ru ...gp gdtmmk ug tluurm huw vohurl ,xupllpi chuW
                 TXT,
                 'director_id' => Director::factory()->with(
                     'Brian De Palma',
