@@ -14,7 +14,9 @@ class MovieController extends Controller
     public function index(Request $request)
     {
         return Inertia::render('Movies', [
-            'movies' => fn () => Movie::orderBy('name')
+            'movies' => fn () => Movie::query()
+                ->orderByRaw("(name = ?) DESC", ['Mission: Impossible'])
+                ->orderBy('name')
                 ->with(['director'])
                 ->when(
                     $request->filled('search'),
