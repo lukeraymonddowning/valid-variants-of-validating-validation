@@ -1,0 +1,11 @@
+# Ignore artifacts:
+/node_modules
+/public
+/vendor
+/.idea
+/.vscode
+composer.json
+composer.lock
+
+
+

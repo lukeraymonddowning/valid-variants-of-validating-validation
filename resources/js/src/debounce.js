@@ -2,13 +2,13 @@ const timeouts = {};
 
 const debounce = (callback, delay, key) => {
     if (timeouts[key] !== null) {
-        clearTimeout(timeouts[key])
+        clearTimeout(timeouts[key]);
     }
 
     timeouts[key] = setTimeout(() => {
         callback();
         timeouts[key] = null;
-    }, delay)
+    }, delay);
 };
 
-export {debounce};
+export { debounce };

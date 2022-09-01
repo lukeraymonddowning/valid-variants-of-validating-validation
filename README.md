@@ -3,6 +3,7 @@
 A talk originally prepared for [Laracon Online](https://laracon.net) on September 14, 2022.
 
 The talk covers three valid ways of testing validation and controller logic in Laravel applications:
+
 1. Snapshots
 2. Shared arrays
 3. Request factories
