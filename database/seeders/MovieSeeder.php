@@ -53,7 +53,7 @@ class MovieSeeder extends Seeder
                 'plot' => <<<'TXT'
                 I mean come on, that's totally unrealistic. I'm not being funny, but it just isn't believable. There's no way that's how
                 it would actually work in real life. You're telling me that if I turn my amp up that loud, I'll go flying across the room?
-                Oh, there are DeLoreans in it too. And Flux Capacitors. But that guitar amp just makes the whole think unbelievable.
+                Oh, there are DeLoreans in it too. And Flux Capacitors. But that guitar amp just makes the whole thing unbelievable.
                 TXT,
                 'director_id' => Director::factory()->with(
                     'Robert Zemeckis',
