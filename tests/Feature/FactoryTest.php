@@ -29,7 +29,6 @@ it('requires valid data', function ($data, $errors) {
     'the name is null' => [['name' => null], ['name' => 'required']],
     'the name is not a string' => [['name' => 1], ['name' => 'string']],
     'the name is longer than 255 chars' => [['name' => str_repeat('a', 256)], ['name' => '255 characters']],
-    'the rating is not a supported enum value' => [['rating' => 'foo'], ['rating' => 'invalid']],
 ]);
 
 it('links the movie to the director', function () {
