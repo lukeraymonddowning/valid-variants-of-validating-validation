@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Director;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,17 +11,13 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('movies', function (Blueprint $table) {
+        Schema::create('directors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('released_on');
-            $table->string('rating');
-            $table->string('runtime');
-            $table->longText('plot');
-            $table->string('poster_url');
-            $table->foreignIdFor(Director::class);
+            $table->date('born_on');
+            $table->string('portrait_url');
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movies');
+        Schema::dropIfExists('directors');
     }
 };

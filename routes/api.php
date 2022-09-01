@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\MovieRating;
+use App\Models\Director;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('autofill/directors', function () {
+    return Director::select(['id', 'name'])->get()->toJson();
+})->name('autofill.directors');
+
+Route::get('autofill/movie-ratings', function () {
+    return MovieRating::cases();
+})->name('autofill.movie-ratings');

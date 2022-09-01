@@ -16,7 +16,7 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
+Route::middleware(['guest'])->get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
@@ -31,6 +31,7 @@ Route::controller(MovieController::class)
     ->name('movies.')
     ->group(function () {
         Route::get('/', 'index')->name('index');
+        Route::post('/', 'store')->name('store');
     });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

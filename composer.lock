@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac4e0d79a1ae24f2b3691f19c11f1c26",
+    "content-hash": "134173720e67f558d1e3cbd3558813bf",
     "packages": [
         {
             "name": "brick/math",
@@ -6356,6 +6356,56 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "jasonmccreary/laravel-test-assertions",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasonmccreary/laravel-test-assertions.git",
+                "reference": "2547c0366f1ee9a2d58b031468b26edc63faef4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasonmccreary/laravel-test-assertions/zipball/2547c0366f1ee9a2d58b031468b26edc63faef4e",
+                "reference": "2547c0366f1ee9a2d58b031468b26edc63faef4e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/testing": "^8.0|^9.0",
+                "mockery/mockery": "^1.4.2",
+                "php": ">=7.3|^8.0",
+                "phpunit/phpunit": "^9.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JMac\\Testing\\AdditionalAssertionsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JMac\\Testing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason McCreary",
+                    "email": "jason@pureconcepts.net"
+                }
+            ],
+            "description": "A set of helpful assertions when testing Laravel applications.",
+            "support": {
+                "issues": "https://github.com/jasonmccreary/laravel-test-assertions/issues",
+                "source": "https://github.com/jasonmccreary/laravel-test-assertions/tree/v2.1.1"
+            },
+            "time": "2022-03-08T14:47:39+00:00"
+        },
+        {
             "name": "jean85/pretty-package-versions",
             "version": "2.0.5",
             "source": {
@@ -9131,6 +9181,193 @@
             "time": "2022-08-26T13:28:24+00:00"
         },
         {
+            "name": "spatie/macroable",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/macroable.git",
+                "reference": "ec2c320f932e730607aff8052c44183cf3ecb072"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/macroable/zipball/ec2c320f932e730607aff8052c44183cf3ecb072",
+                "reference": "ec2c320f932e730607aff8052c44183cf3ecb072",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0|^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Macroable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A trait to dynamically add methods to a class",
+            "homepage": "https://github.com/spatie/macroable",
+            "keywords": [
+                "macroable",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/macroable/issues",
+                "source": "https://github.com/spatie/macroable/tree/2.0.0"
+            },
+            "time": "2021-03-26T22:39:02+00:00"
+        },
+        {
+            "name": "spatie/ray",
+            "version": "1.36.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/ray.git",
+                "reference": "4a4def8cda4806218341b8204c98375aa8c34323"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/ray/zipball/4a4def8cda4806218341b8204c98375aa8c34323",
+                "reference": "4a4def8cda4806218341b8204c98375aa8c34323",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^7.3|^8.0",
+                "ramsey/uuid": "^3.0|^4.1",
+                "spatie/backtrace": "^1.1",
+                "spatie/macroable": "^1.0|^2.0",
+                "symfony/stopwatch": "^4.0|^5.1|^6.0",
+                "symfony/var-dumper": "^4.2|^5.1|^6.0"
+            },
+            "require-dev": {
+                "illuminate/support": "6.x|^8.18|^9.0",
+                "nesbot/carbon": "^2.43",
+                "phpstan/phpstan": "^0.12.92",
+                "phpunit/phpunit": "^9.5",
+                "spatie/phpunit-snapshot-assertions": "^4.2",
+                "spatie/test-time": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Spatie\\Ray\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Debug with Ray to fix problems faster",
+            "homepage": "https://github.com/spatie/ray",
+            "keywords": [
+                "ray",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/ray/issues",
+                "source": "https://github.com/spatie/ray/tree/1.36.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/spatie",
+                    "type": "github"
+                },
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "other"
+                }
+            ],
+            "time": "2022-08-11T14:04:18+00:00"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "v6.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "77dedae82ce2a26e2e9b481855473fc3b3e4e54d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/77dedae82ce2a26e2e9b481855473fc3b3e4e54d",
+                "reference": "77dedae82ce2a26e2e9b481855473fc3b3e4e54d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/service-contracts": "^1|^2|^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides a way to profile code",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/stopwatch/tree/v6.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-25T11:15:52+00:00"
+        },
+        {
             "name": "thecodingmachine/phpstan-safe-rule",
             "version": "v1.2.0",
             "source": {
@@ -9236,6 +9473,80 @@
                 }
             ],
             "time": "2021-07-28T10:34:58+00:00"
+        },
+        {
+            "name": "worksome/request-factories",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/worksome/request-factories.git",
+                "reference": "794823fc791e75802d9bfc8b443eebcbe7bd9f6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/worksome/request-factories/zipball/794823fc791e75802d9bfc8b443eebcbe7bd9f6f",
+                "reference": "794823fc791e75802d9bfc8b443eebcbe7bd9f6f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0 || ^9.0",
+                "php": "^8.0 || ^8.1"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^5.10 || ^6.0",
+                "nunomaduro/larastan": "^1.0 || ^2.0",
+                "orchestra/testbench": "^6.22 || ^7.0",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "worksome/coding-style": "0.17.0",
+                "worksome/pest-plugin-silence": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Worksome\\RequestFactories\\RequestFactoriesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/PestAutoload.php"
+                ],
+                "psr-4": {
+                    "Worksome\\RequestFactories\\": "src",
+                    "Worksome\\RequestFactories\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "luke",
+                    "email": "lukeraymonddowning@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Test Form Requests in Laravel without all of the boilerplate.",
+            "homepage": "https://github.com/worksome/request-factories",
+            "keywords": [
+                "laravel",
+                "request-factories",
+                "worksome"
+            ],
+            "support": {
+                "issues": "https://github.com/worksome/request-factories/issues",
+                "source": "https://github.com/worksome/request-factories/tree/v2.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/worksome",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-09-01T08:03:19+00:00"
         }
     ],
     "aliases": [],
@@ -9244,7 +9555,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0"
+        "php": "^8.1"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
