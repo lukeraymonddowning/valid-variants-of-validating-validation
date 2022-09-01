@@ -23,7 +23,7 @@ class MovieFactory extends Factory
             'name' => $this->faker->sentence(),
             'released_on' => Carbon::parse($this->faker->dateTimeBetween('-50 years', '-2 months')),
             'rating' => $this->faker->randomElement(['PG-13', 'TV-14', 'R', 'N/A']),
-            'runtime' => "{$this->faker->numberBetween(90, 180)} minutes",
+            'runtime' => "{$this->faker->numberBetween(90, 180)} min",
             'plot' => $this->faker->paragraph(),
             'poster_url' => $this->faker->imageUrl(1080, 1920),
             'director_id' => Director::factory(),

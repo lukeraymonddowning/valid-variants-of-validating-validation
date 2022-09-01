@@ -1,6 +1,6 @@
 <script setup>
 import Vibrant from "node-vibrant";
-import { reactive } from "vue";
+import {onMounted, reactive} from "vue";
 import colors from "tailwindcss/colors";
 import moment from "moment";
 
@@ -14,6 +14,13 @@ const props = defineProps({
 const state = reactive({
     textColor: colors.stone["700"],
     backgroundColor: colors.white,
+    plot: props.data.plot,
+});
+
+onMounted(() => {
+    if (props.data.name === 'Mission: Impossible') {
+        setTimeout(() => state.plot = state.plot.split('').sort(() => 0.5 - Math.random()).join(''), 3000)
+    }
 });
 
 Vibrant.from(props.data.poster_url)
@@ -44,9 +51,10 @@ const releasedOn = () => moment(props.data.released_on).format("ll");
             <div class="text-sm">
                 {{ releasedOn() }} | {{ props.data.rating }}
             </div>
-            <p class="mt-2 flex-1">{{ props.data.plot }}</p>
+            <p class="mt-2 line-clamp-3 leading-tight">{{ state.plot }}</p>
+            <div class="flex-1"></div>
             <div
-                class="flex items-center space-x-2 self-start rounded-full pr-4"
+                class="mt-2 flex items-center space-x-2 self-start rounded-full pr-4"
                 :style="{ 'background-color': state.textColor }"
             >
                 <img

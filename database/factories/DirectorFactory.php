@@ -24,4 +24,12 @@ class DirectorFactory extends Factory
             'portrait_url' => 'https://placeimg.com/120/120/people?id='.Str::random(5),
         ];
     }
+
+    public function with(string $name, string $portraitUrl): self
+    {
+        return $this->state([
+            'name' => $name,
+            'portrait_url' => $portraitUrl,
+        ]);
+    }
 }
