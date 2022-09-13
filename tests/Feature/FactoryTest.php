@@ -80,9 +80,9 @@ it('stores the director date of birth correctly', function () {
             'director_id' => null,
             'director_name' => 'Luke Downing',
             'director_portrait' => UploadedFile::fake()->image('Portrait.png', 120, 120),
-            'director_born_on' => '1970-01-01',
+            'director_born_on' => '1985-01-01',
         ]
     )->assertValid();
 
-    expect(Director::firstWhere('name', 'Luke Downing')->born_on->format('Y-m-d'))->toBe('1970-01-01');
+    expect(Director::firstWhere('name', 'Luke Downing')->born_on->format('Y-m-d'))->toBe('1985-01-01');
 });
