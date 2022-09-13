@@ -5,6 +5,7 @@ use App\Models\Director;
 use App\Models\Movie;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
+use Tests\RequestFactories\StoreMovieRequestFactory;
 
 beforeEach(function () {
     $this->validData = [
