@@ -19,10 +19,13 @@ beforeEach(function () {
 });
 
 it('requires valid data', function ($data, $errors) {
-    $response = login()->post(route('movies.store'), [
-        ...$this->validData,
-        ...$data,
-    ]);
+    $response = login()->post(
+        route('movies.store'),
+        [
+            ...$this->validData,
+            ...$data,
+        ]
+    );
 
     $response->assertInvalid($errors);
 })->with([
@@ -32,13 +35,16 @@ it('requires valid data', function ($data, $errors) {
 ]);
 
 it('links the movie to the director', function () {
-    login()->post(route('movies.store'), [
-        ...$this->validData,
-        'director_id' => null,
-        'director_name' => 'Luke Downing',
-        'director_portrait' => UploadedFile::fake()->image('Portrait.png', 120, 120),
-        'director_born_on' => '1970-01-01',
-    ])->assertValid();
+    login()->post(
+        route('movies.store'),
+        [
+            ...$this->validData,
+            'director_id' => null,
+            'director_name' => 'Luke Downing',
+            'director_portrait' => UploadedFile::fake()->image('Portrait.png', 120, 120),
+            'director_born_on' => '1970-01-01',
+        ]
+    )->assertValid();
 
     $movie = Movie::firstWhere('name', 'V for Vendetta');
     $director = Director::firstWhere('name', 'Luke Downing');
@@ -49,13 +55,16 @@ it('links the movie to the director', function () {
 it('stores the director portrait correctly', function () {
     Storage::fake('public');
 
-    login()->post(route('movies.store'), [
-        ...$this->validData,
-        'director_id' => null,
-        'director_name' => 'Luke Downing',
-        'director_portrait' => UploadedFile::fake()->image('Portrait.png', 120, 120),
-        'director_born_on' => '1970-01-01',
-    ])->assertValid();
+    login()->post(
+        route('movies.store'),
+        [
+            ...$this->validData,
+            'director_id' => null,
+            'director_name' => 'Luke Downing',
+            'director_portrait' => UploadedFile::fake()->image('Portrait.png', 120, 120),
+            'director_born_on' => '1970-01-01',
+        ]
+    )->assertValid();
 
     $director = Director::firstWhere('name', 'Luke Downing');
 
@@ -63,13 +72,16 @@ it('stores the director portrait correctly', function () {
 });
 
 it('stores the director date of birth correctly', function () {
-    login()->post(route('movies.store'), [
-        ...$this->validData,
-        'director_id' => null,
-        'director_name' => 'Luke Downing',
-        'director_portrait' => UploadedFile::fake()->image('Portrait.png', 120, 120),
-        'director_born_on' => '1970-01-01',
-    ])->assertValid();
+    login()->post(
+        route('movies.store'),
+        [
+            ...$this->validData,
+            'director_id' => null,
+            'director_name' => 'Luke Downing',
+            'director_portrait' => UploadedFile::fake()->image('Portrait.png', 120, 120),
+            'director_born_on' => '1970-01-01',
+        ]
+    )->assertValid();
 
     expect(Director::firstWhere('name', 'Luke Downing')->born_on->format('Y-m-d'))->toBe('1970-01-01');
 });
