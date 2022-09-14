@@ -7,7 +7,7 @@ import { Head, Link } from "@inertiajs/inertia-vue3";
     <Head title="Valid Variants of Validating Validation" />
 
     <div
-        class="items-top relative flex min-h-screen justify-center bg-teal-400 dark:bg-gray-900 sm:items-center sm:pt-0"
+        class="items-top relative flex min-h-screen justify-center bg-teal-400 sm:items-center sm:pt-0"
     >
         <div class="group relative flex">
             <img src="/assets/angry-parrot.png" class="absolute w-full object-contain top-1 h-16 z-0 group-hover:-translate-y-16 transform duration-500">
